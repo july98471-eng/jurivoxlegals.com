@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>JuriVox Legal | Loan Settlement, Cyber Crime & Corporate Lawyers – New Delhi</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+  --navy:#0a1628;
+  --navy2:#112040;
+  --navy3:#1a3060;
+  --gold:#c8a84b;
+  --gold2:#e2c87a;
+  --white:#ffffff;
+  --off:#f5f7fa;
+  --muted:#6b82a0;
+  --border:rgba(200,168,75,0.18);
+  --card:#ffffff;
+}
+
+body{font-family:'Outfit',sans-serif;background:var(--white);color:var(--navy);overflow-x:hidden}
+
+/* ══ SCROLLBAR ══ */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--navy)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px}
+
+/* ══ NAV ══ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:rgba(10,22,40,0.96);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 6vw;height:70px;
+}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.logo-mark{
+  width:38px;height:38px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--navy);
+}
+.logo-text{line-height:1.1}
+.logo-name{
+  font-family:'Playfair Display',serif;font-size:18px;font-weight:700;
+  color:var(--white);letter-spacing:0.3px;
+}
+.logo-tag{font-size:9px;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;margin-top:1px}
+
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{
+  color:rgba(255,255,255,0.7);text-decoration:none;
+  font-size:13px;font-weight:500;letter-spacing:0.3px;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{
+  background:var(--gold)!important;color:var(--navy)!important;
+  padding:9px 22px;border-radius:6px;font-weight:700!important;
+  transition:background .2s!important;
+}
+.nav-cta:hover{background:var(--gold2)!important}
+
+/* ══ HERO ══ */
+.hero{
+  min-height:100vh;
+  background:var(--navy);
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;
+  padding:140px 6vw 100px;
+}
+
+/* Animated grid lines */
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(200,168,75,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(200,168,75,0.04) 1px,transparent 1px);
+  background-size:72px 72px;
+  animation:gridDrift 30s linear infinite;
+}
+@keyframes gridDrift{from{background-position:0 0}to{background-position:72px 72px}}
+
+.hero-orb1{
+  position:absolute;top:-120px;right:-80px;
+  width:640px;height:640px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,168,75,0.1) 0%,transparent 65%);
+  pointer-events:none;
+}
+.hero-orb2{
+  position:absolute;bottom:-200px;left:-100px;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(26,48,96,0.6) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+.hero-content{position:relative;z-index:2;max-width:800px}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(200,168,75,0.1);border:1px solid var(--border);
+  padding:7px 18px;border-radius:100px;margin-bottom:30px;
+  font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);
+  animation:fadeUp .8s ease both;
+}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+
+.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(42px,6.5vw,82px);
+  font-weight:900;line-height:1.04;color:var(--white);
+  margin-bottom:22px;
+  animation:fadeUp .8s .1s ease both;
+}
+.hero-title em{color:var(--gold);font-style:italic}
+.hero-title .line2{display:block;margin-top:4px}
+
+.hero-sub{
+  font-size:17px;line-height:1.75;color:rgba(255,255,255,0.58);
+  max-width:560px;margin-bottom:42px;font-weight:300;
+  animation:fadeUp .8s .2s ease both;
+}
+
+.hero-btns{
+  display:flex;gap:14px;flex-wrap:wrap;
+  animation:fadeUp .8s .3s ease both;
+}
+.btn-gold{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gold);color:var(--navy);
+  padding:15px 32px;border-radius:6px;
+  text-decoration:none;font-weight:700;font-size:14px;
+  transition:all .25s;
+}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(200,168,75,0.3)}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(255,255,255,0.22);color:var(--white);
+  padding:15px 32px;border-radius:6px;
+  text-decoration:none;font-weight:500;font-size:14px;
+  transition:all .25s;
+}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* Stats strip */
+.hero-stats{
+  position:absolute;bottom:0;left:0;right:0;
+  background:rgba(255,255,255,0.03);
+  border-top:1px solid var(--border);
+  display:flex;z-index:2;
+}
+.stat-item{
+  flex:1;padding:22px 0;text-align:center;
+  border-right:1px solid var(--border);
+}
+.stat-item:last-child{border-right:none}
+.stat-num{
+  font-family:'Playfair Display',serif;
+  font-size:34px;font-weight:700;color:var(--gold);line-height:1;
+}
+.stat-label{font-size:10px;color:rgba(255,255,255,0.45);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+
+/* ══ TICKER ══ */
+.ticker{background:var(--gold);padding:13px 0;overflow:hidden}
+.ticker-track{
+  display:flex;gap:0;
+  animation:tick 20s linear infinite;
+  width:max-content;
+  white-space:nowrap;
+}
+.ticker-item{
+  font-size:11px;font-weight:700;color:var(--navy);
+  letter-spacing:2px;text-transform:uppercase;
+  padding:0 32px;
+  display:flex;align-items:center;gap:24px;
+}
+.ticker-item::after{content:'◆';font-size:7px;opacity:0.6}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ══ SECTION COMMON ══ */
+section{padding:110px 6vw}
+.sec-eyebrow{
+  font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);font-weight:700;margin-bottom:14px;
+  display:flex;align-items:center;gap:12px;
+}
+.sec-eyebrow::before{content:'';width:28px;height:1.5px;background:var(--gold)}
+.sec-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(32px,4vw,54px);font-weight:700;
+  line-height:1.1;color:var(--navy);margin-bottom:18px;
+}
+.sec-desc{font-size:16px;line-height:1.75;color:var(--muted);font-weight:300;max-width:580px}
+
+/* ══ ABOUT ══ */
+.about{background:var(--off)}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;margin-top:64px;
+}
+.about-visual{position:relative}
+.about-card{
+  background:var(--navy);border-radius:12px;
+  padding:44px;position:relative;overflow:hidden;
+}
+.about-card::before{
+  content:'';position:absolute;top:-60px;right:-60px;
+  width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,168,75,0.12),transparent);
+}
+.about-card::after{
+  content:'';position:absolute;bottom:-40px;left:-40px;
+  width:150px;height:150px;border-radius:50%;
+  border:1.5px solid rgba(200,168,75,0.12);
+}
+.about-quote{
+  font-family:'Playfair Display',serif;
+  font-size:24px;line-height:1.5;color:var(--white);
+  font-style:italic;position:relative;z-index:1;
+}
+.about-quote::before{
+  content:'"';
+  position:absolute;top:-28px;left:-8px;
+  font-size:90px;color:var(--gold);opacity:0.25;
+  font-family:'Playfair Display',serif;line-height:1;
+}
+.about-card-name{
+  margin-top:24px;font-size:12px;color:var(--gold);
+  font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  position:relative;z-index:1;
+}
+.about-badge{
+  position:absolute;bottom:-18px;right:-18px;
+  background:var(--gold);border-radius:8px;
+  padding:18px 22px;text-align:center;
+  box-shadow:0 10px 30px rgba(200,168,75,0.3);
+}
+.about-badge-num{
+  font-family:'Playfair Display',serif;
+  font-size:30px;font-weight:900;color:var(--navy);line-height:1;
+}
+.about-badge-label{font-size:9px;font-weight:700;color:var(--navy);letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+
+.about-points{display:flex;flex-direction:column;gap:22px}
+.about-pt{display:flex;gap:16px;align-items:flex-start}
+.about-pt-icon{
+  width:46px;height:46px;flex-shrink:0;
+  background:rgba(200,168,75,0.08);border:1px solid var(--border);
+  border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:19px;
+}
+.about-pt-title{font-weight:700;font-size:15px;color:var(--navy);margin-bottom:3px}
+.about-pt-text{font-size:13.5px;line-height:1.65;color:var(--muted)}
+
+/* ══ SERVICES ══ */
+.services-header{max-width:580px;margin-bottom:56px}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+  gap:22px;
+}
+.svc-card{
+  background:var(--white);border:1.5px solid #e4eaf2;
+  border-radius:12px;padding:34px 30px;
+  position:relative;overflow:hidden;
+  transition:all .3s;cursor:default;
+}
+.svc-card::before{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+  transform:scaleX(0);transition:transform .35s;transform-origin:left;
+}
+.svc-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 24px 60px rgba(10,22,40,0.09);
+  border-color:rgba(200,168,75,0.3);
+}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-icon{
+  width:52px;height:52px;background:var(--navy);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;margin-bottom:18px;
+}
+.svc-title{
+  font-family:'Playfair Display',serif;
+  font-size:20px;font-weight:700;color:var(--navy);margin-bottom:10px;
+}
+.svc-text{font-size:13.5px;line-height:1.7;color:var(--muted)}
+.svc-arrow{
+  display:inline-flex;align-items:center;gap:5px;
+  margin-top:18px;color:var(--gold);font-size:12px;font-weight:700;
+  text-decoration:none;letter-spacing:0.5px;transition:gap .2s;
+}
+.svc-card:hover .svc-arrow{gap:10px}
+
+/* ══ TEAM ══ */
+.team{background:var(--navy)}
+.team .sec-title{color:var(--white)}
+.team .sec-desc{color:rgba(255,255,255,0.48)}
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:24px;margin-top:56px;
+}
+.team-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px;overflow:hidden;
+  transition:all .3s;
+}
+.team-card:hover{
+  border-color:rgba(200,168,75,0.35);
+  background:rgba(255,255,255,0.06);
+  transform:translateY(-4px);
+}
+.team-photo{
+  width:100%;aspect-ratio:1;
+  background:linear-gradient(145deg,var(--navy3),var(--navy2));
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.team-photo-bg{
+  position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 30%,rgba(200,168,75,0.08),transparent);
+}
+.team-avatar{
+  width:80px;height:80px;border-radius:50%;
+  background:rgba(200,168,75,0.08);
+  border:2px solid rgba(200,168,75,0.25);
+  display:flex;align-items:center;justify-content:center;
+  font-size:32px;position:relative;z-index:1;
+}
+.team-body{padding:22px}
+.team-name{
+  font-family:'Playfair Display',serif;
+  font-size:20px;font-weight:700;color:var(--white);margin-bottom:3px;
+}
+.team-role{
+  font-size:10px;color:var(--gold);letter-spacing:1.5px;
+  text-transform:uppercase;font-weight:600;margin-bottom:10px;
+}
+.team-bio{font-size:12.5px;color:rgba(255,255,255,0.42);line-height:1.6}
+.team-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
+.team-tag{
+  background:rgba(200,168,75,0.08);border:1px solid rgba(200,168,75,0.2);
+  color:rgba(200,168,75,0.9);font-size:9.5px;padding:3px 9px;
+  border-radius:100px;font-weight:600;letter-spacing:0.5px;
+}
+
+/* ══ CONTACT ══ */
+.contact{background:var(--navy)}
+.contact .sec-title{color:var(--white)}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1.4fr;
+  gap:80px;margin-top:56px;align-items:start;
+}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-intro{font-size:15px;line-height:1.75;color:rgba(255,255,255,0.48);margin-bottom:8px;font-weight:300}
+.c-item{display:flex;gap:14px;align-items:flex-start}
+.c-icon{
+  width:44px;height:44px;flex-shrink:0;
+  background:rgba(200,168,75,0.1);border:1px solid var(--border);
+  border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;
+}
+.c-label{font-size:10px;color:rgba(255,255,255,0.38);letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+.c-val{font-size:14.5px;color:var(--white);font-weight:500}
+.c-val a{color:var(--gold);text-decoration:none}
+.c-val a:hover{text-decoration:underline}
+
+/* WhatsApp CTA block */
+.wa-cta{
+  margin-top:28px;
+  background:rgba(37,211,102,0.08);
+  border:1px solid rgba(37,211,102,0.2);
+  border-radius:10px;padding:20px 22px;
+  display:flex;align-items:center;gap:14px;
+}
+.wa-cta-icon{font-size:28px;flex-shrink:0}
+.wa-cta-text{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.5}
+.wa-cta-text strong{display:block;color:#fff;font-size:14px;margin-bottom:3px}
+.wa-cta-btn{
+  margin-left:auto;flex-shrink:0;
+  background:#25d366;color:#fff;
+  padding:11px 20px;border-radius:7px;
+  text-decoration:none;font-size:13px;font-weight:700;
+  display:flex;align-items:center;gap:7px;
+  transition:all .2s;white-space:nowrap;
+}
+.wa-cta-btn:hover{background:#20ba5a;transform:translateY(-1px)}
+
+/* Form */
+.contact-form{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:14px;padding:40px;
+}
+.form-title{
+  font-family:'Playfair Display',serif;
+  font-size:24px;font-weight:700;color:var(--white);margin-bottom:8px;
+}
+.form-sub{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:28px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
+.fg label{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:0.5px;text-transform:uppercase;font-weight:500}
+.fg input,.fg select,.fg textarea{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:7px;padding:12px 15px;
+  color:var(--white);font-size:14px;font-family:'Outfit',sans-serif;
+  outline:none;transition:border-color .2s;width:100%;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,0.2)}
+.fg select option{background:var(--navy)}
+.fg textarea{resize:vertical;min-height:96px}
+.form-submit{
+  width:100%;padding:15px;border:none;border-radius:7px;
+  background:var(--gold);color:var(--navy);
+  font-size:14px;font-weight:700;font-family:'Outfit',sans-serif;
+  cursor:pointer;transition:all .2s;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  letter-spacing:0.3px;
+}
+.form-submit:hover{background:var(--gold2);transform:translateY(-1px)}
+.form-note{
+  text-align:center;font-size:11px;color:rgba(255,255,255,0.28);
+  margin-top:12px;
+}
+
+/* ══ FOOTER ══ */
+footer{
+  background:#060e1c;
+  border-top:1px solid rgba(200,168,75,0.1);
+  padding:60px 6vw 28px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr;
+  gap:50px;margin-bottom:48px;
+}
+.footer-brand .logo{margin-bottom:14px}
+.footer-brand p{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.7;max-width:270px}
+.footer-col-title{
+  font-size:10px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--gold);font-weight:700;margin-bottom:18px;
+}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.06);
+  padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+}
+.footer-copy{font-size:11.5px;color:rgba(255,255,255,0.25)}
+.footer-legal{display:flex;gap:20px}
+.footer-legal a{font-size:11.5px;color:rgba(255,255,255,0.25);text-decoration:none;transition:color .2s}
+.footer-legal a:hover{color:var(--gold)}
+
+/* ══ WA FLOAT ══ */
+.wa-float{
+  position:fixed;bottom:26px;right:26px;z-index:300;
+  width:56px;height:56px;border-radius:50%;
+  background:#25d366;box-shadow:0 4px 24px rgba(37,211,102,0.45);
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;transition:transform .2s;
+}
+.wa-float:hover{transform:scale(1.12)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+.wa-tooltip{
+  position:absolute;right:68px;top:50%;transform:translateY(-50%);
+  background:rgba(0,0,0,0.8);color:#fff;
+  font-size:12px;font-weight:600;padding:6px 12px;border-radius:6px;
+  white-space:nowrap;opacity:0;pointer-events:none;
+  transition:opacity .2s;
+}
+.wa-float:hover .wa-tooltip{opacity:1}
+
+/* ══ ANIMATIONS ══ */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(28px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.reveal{
+  opacity:0;transform:translateY(22px);
+  transition:opacity .6s ease,transform .6s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ══ MOBILE ══ */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hero{padding:110px 20px 100px}
+  .hero-stats{position:static;margin-top:0}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
+  section{padding:70px 20px}
+  nav{padding:0 20px}
+}
+@media(max-width:540px){
+  .footer-grid{grid-template-columns:1fr}
+  .hero-stats{flex-direction:column}
+  .stat-item{border-right:none;border-bottom:1px solid var(--border)}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">
+    <div class="logo-mark">J</div>
+    <div class="logo-text">
+      <div class="logo-name">JuriVox Legal</div>
+      <div class="logo-tag">Advocates & Consultants</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#team">Our Team</a></li>
+    <li><a href="#contact" class="nav-cta">Free Consultation</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-orb1"></div>
+  <div class="hero-orb2"></div>
+  <div class="hero-content">
+    <div class="hero-badge">New Delhi · Pan-India Practice</div>
+    <h1 class="hero-title">
+      Your Legal Shield<br/>
+      <span class="line2">in Every <em>Financial Storm.</em></span>
+    </h1>
+    <p class="hero-sub">JuriVox Legal fights for borrowers, victims, and businesses across India. From crushing loan burdens to cyber fraud recovery — we speak the law so you don't have to face it alone.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-gold">
+        Get Free Consultation
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#services" class="btn-ghost">Explore Services</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">600+</div>
+      <div class="stat-label">Cases Won</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">₹800Cr+</div>
+      <div class="stat-label">Debt Settled</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">12+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">98%</div>
+      <div class="stat-label">Client Satisfaction</div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <div class="ticker-item">Loan Settlement</div>
+    <div class="ticker-item">Debt Settlement</div>
+    <div class="ticker-item">SARFAESI Defence</div>
+    <div class="ticker-item">Cyber Crime</div>
+    <div class="ticker-item">Corporate Law</div>
+    <div class="ticker-item">Cheque Bounce</div>
+    <div class="ticker-item">NPA Resolution</div>
+    <div class="ticker-item">OTS Negotiation</div>
+    <div class="ticker-item">Loan Settlement</div>
+    <div class="ticker-item">Debt Settlement</div>
+    <div class="ticker-item">SARFAESI Defence</div>
+    <div class="ticker-item">Cyber Crime</div>
+    <div class="ticker-item">Corporate Law</div>
+    <div class="ticker-item">Cheque Bounce</div>
+    <div class="ticker-item">NPA Resolution</div>
+    <div class="ticker-item">OTS Negotiation</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="sec-eyebrow">Who We Are</div>
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="about-card">
+        <p class="about-quote">We don't just know the law — we understand the financial pain behind every case. That's what makes us different.</p>
+        <div class="about-card-name">JuriVox Legal · New Delhi</div>
+      </div>
+      <div class="about-badge">
+        <div class="about-badge-num">₹800Cr+</div>
+        <div class="about-badge-label">Debt Settled</div>
+      </div>
+    </div>
+    <div>
+      <h2 class="sec-title">A Firm Built on<br/>Trust & Results</h2>
+      <p class="sec-desc" style="margin-bottom:34px">JuriVox Legal is a premier law firm headquartered in New Delhi, specialising in financial dispute resolution, SARFAESI matters, cyber crime defence, and corporate advisory. We combine deep legal expertise with real financial understanding to deliver outcomes that change lives.</p>
+      <div class="about-points">
+        <div class="about-pt reveal">
+          <div class="about-pt-icon">⚖️</div>
+          <div>
+            <div class="about-pt-title">Pan-India Representation</div>
+            <div class="about-pt-text">We appear before Supreme Court, High Courts, DRTs, DRATs, and NCLTs across India on your behalf.</div>
+          </div>
+        </div>
+        <div class="about-pt reveal">
+          <div class="about-pt-icon">🤝</div>
+          <div>
+            <div class="about-pt-title">Client-First Philosophy</div>
+            <div class="about-pt-text">Every case gets personal attention. We understand the human cost of financial distress — not just the legal side.</div>
+          </div>
+        </div>
+        <div class="about-pt reveal">
+          <div class="about-pt-icon">📊</div>
+          <div>
+            <div class="about-pt-title">Proven Track Record</div>
+            <div class="about-pt-text">600+ cases resolved, ₹800Cr+ in debt settled — our results speak louder than promises.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="sec-eyebrow">Practice Areas</div>
+  <div class="services-header">
+    <h2 class="sec-title">Expert Legal Solutions Across Every Domain</h2>
+    <p class="sec-desc">From negotiating bank settlements to defending cyber fraud victims — we handle the full spectrum of financial and corporate legal challenges.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card reveal">
+      <div class="svc-icon">💰</div>
+      <div class="svc-title">Loan Settlement</div>
+      <p class="svc-text">Strategic negotiation with banks and NBFCs to reduce your outstanding loan and achieve a One-Time Settlement (OTS) — giving you a genuine fresh financial start.</p>
+      <a href="#contact" class="svc-arrow">Consult Now →</a>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-icon">📉</div>
+      <div class="svc-title">Debt Settlement</div>
+      <p class="svc-text">We negotiate directly with lenders to reduce the total debt burden, waive penal interest, and restructure repayment terms in your favour.</p>
+      <a href="#contact" class="svc-arrow">Consult Now →</a>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-icon">🏛️</div>
+      <div class="svc-title">SARFAESI Defence</div>
+      <p class="svc-text">Expert representation before DRT and DRAT to challenge wrongful possession notices, auction proceedings, and secure urgent stays under the SARFAESI Act.</p>
+      <a href="#contact" class="svc-arrow">Consult Now →</a>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-icon">🛡️</div>
+      <div class="svc-title">Cyber Crime</div>
+      <p class="svc-text">Legal assistance for victims of online fraud, UPI scams, identity theft, and digital financial crimes. We work with cybercell authorities and pursue all available legal remedies.</p>
+      <a href="#contact" class="svc-arrow">Consult Now →</a>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-icon">🏢</div>
+      <div class="svc-title">Corporate Law</div>
+      <p class="svc-text">End-to-end corporate legal advisory — contracts, mergers, NCLT proceedings, SEBI compliance, and commercial dispute resolution for businesses of all sizes.</p>
+      <a href="#contact" class="svc-arrow">Consult Now →</a>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-icon">📜</div>
+      <div class="svc-title">Cheque Bounce</div>
+      <p class="svc-text">Swift legal action under Section 138 of the NI Act for dishonoured cheques, along with civil recovery suits to recover your rightful dues efficiently.</p>
+      <a href="#contact" class="svc-arrow">Consult Now →</a>
+    </div>
+    <div class="svc-card reveal" style="grid-column:span 1">
+      <div class="svc-icon">📊</div>
+      <div class="svc-title">NPA Resolution</div>
+      <p class="svc-text">Specialised counsel for NPA accounts, IBC/insolvency proceedings, and stressed asset restructuring. We represent borrowers and creditors in complex resolution matters.</p>
+      <a href="#contact" class="svc-arrow">Consult Now →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="sec-eyebrow">Our Legal Team</div>
+  <h2 class="sec-title">Experienced Advocates<br/>Fighting For You</h2>
+  <p class="sec-desc">Our team of senior advocates, financial law specialists, and corporate counsels are united by one goal — achieving the best outcome for every client.</p>
+  <div class="team-grid">
+    <div class="team-card reveal">
+      <div class="team-photo">
+        <div class="team-photo-bg"></div>
+        <div class="team-avatar">⚖️</div>
+      </div>
+      <div class="team-body">
+        <div class="team-name">Senior Advocate</div>
+        <div class="team-role">Managing Partner</div>
+        <div class="team-bio">15+ years specialising in financial dispute resolution, SARFAESI matters, and DRT proceedings across India.</div>
+        <div class="team-tags">
+          <span class="team-tag">Loan Settlement</span>
+          <span class="team-tag">SARFAESI</span>
+          <span class="team-tag">DRT</span>
+        </div>
+      </div>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-photo">
+        <div class="team-photo-bg"></div>
+        <div class="team-avatar">🏢</div>
+      </div>
+      <div class="team-body">
+        <div class="team-name">Corporate Counsel</div>
+        <div class="team-role">Corporate Law Head</div>
+        <div class="team-bio">Expert in NCLT proceedings, IBC insolvency resolutions, and regulatory compliance for corporates.</div>
+        <div class="team-tags">
+          <span class="team-tag">Corporate Law</span>
+          <span class="team-tag">IBC</span>
+          <span class="team-tag">NCLT</span>
+        </div>
+      </div>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-photo">
+        <div class="team-photo-bg"></div>
+        <div class="team-avatar">🛡️</div>
+      </div>
+      <div class="team-body">
+        <div class="team-name">Cyber Law Specialist</div>
+        <div class="team-role">Digital Crimes Unit</div>
+        <div class="team-bio">Dedicated to cyber crime defence, digital fraud recovery, and data privacy legal matters across India.</div>
+        <div class="team-tags">
+          <span class="team-tag">Cyber Crime</span>
+          <span class="team-tag">IT Act</span>
+          <span class="team-tag">Fraud Recovery</span>
+        </div>
+      </div>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-photo">
+        <div class="team-photo-bg"></div>
+        <div class="team-avatar">💰</div>
+      </div>
+      <div class="team-body">
+        <div class="team-name">Debt Settlement Expert</div>
+        <div class="team-role">Financial Law Advisor</div>
+        <div class="team-bio">Specialist in OTS negotiations, NPA resolution, and bank-borrower mediation with a 90%+ settlement success rate.</div>
+        <div class="team-tags">
+          <span class="team-tag">Debt Settlement</span>
+          <span class="team-tag">OTS</span>
+          <span class="team-tag">NPA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="sec-eyebrow">Get In Touch</div>
+  <h2 class="sec-title">Start With a Free Consultation</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p class="contact-intro">Whether you're facing a loan default, SARFAESI notice, cyber fraud, or a corporate dispute — reach out today. We respond within hours.</p>
+      <div class="c-item">
+        <div class="c-icon">📍</div>
+        <div>
+          <div class="c-label">Office</div>
+          <div class="c-val">New Delhi, India</div>
+        </div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon">📞</div>
+        <div>
+          <div class="c-label">Phone</div>
+          <div class="c-val"><a href="tel:+919354014690">+91 93540 14690</a></div>
+        </div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon">✉️</div>
+        <div>
+          <div class="c-label">Email</div>
+          <div class="c-val"><a href="mailto:info@jurivoxlegal.com">info@jurivoxlegal.com</a></div>
+        </div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon">🕐</div>
+        <div>
+          <div class="c-label">Hours</div>
+          <div class="c-val">Mon – Sat · 10:00 AM – 6:00 PM</div>
+        </div>
+      </div>
+      <!-- WhatsApp CTA -->
+      <div class="wa-cta">
+        <div class="wa-cta-icon">💬</div>
+        <div class="wa-cta-text">
+          <strong>Chat on WhatsApp</strong>
+          Fastest way to reach us — get a response in minutes.
+        </div>
+        <a class="wa-cta-btn" href="https://wa.me/919354014690?text=Hello%20JuriVox%20Legal%2C%20I%20need%20legal%20consultation." target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- FORM — sends to WhatsApp -->
+    <div class="contact-form">
+      <div class="form-title">Send Us a Message</div>
+      <div class="form-sub">Fill in your details — we'll get back to you within 2 hours.</div>
+      <div class="form-row">
+        <div class="fg">
+          <label>Full Name</label>
+          <input type="text" id="fname" placeholder="Your name"/>
+        </div>
+        <div class="fg">
+          <label>Phone Number</label>
+          <input type="tel" id="fphone" placeholder="+91 XXXXX XXXXX"/>
+        </div>
+      </div>
+      <div class="fg">
+        <label>Email Address</label>
+        <input type="email" id="femail" placeholder="you@example.com"/>
+      </div>
+      <div class="fg">
+        <label>Legal Matter</label>
+        <select id="fmatter">
+          <option value="" disabled selected>Select your issue</option>
+          <option>Loan Settlement</option>
+          <option>Debt Settlement</option>
+          <option>SARFAESI / DRT Matter</option>
+          <option>Cyber Crime / Online Fraud</option>
+          <option>Corporate / Commercial Law</option>
+          <option>NPA / Insolvency (IBC)</option>
+          <option>Cheque Bounce / Recovery</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Brief Description</label>
+        <textarea id="fdesc" placeholder="Briefly describe your situation…"></textarea>
+      </div>
+      <button class="form-submit" onclick="sendToWhatsApp()">
+        Send via WhatsApp
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <div class="form-note">🔒 Your details are confidential and will only be shared with our legal team.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="#">
+        <div class="logo-mark">J</div>
+        <div class="logo-text">
+          <div class="logo-name">JuriVox Legal</div>
+          <div class="logo-tag">Advocates & Consultants</div>
+        </div>
+      </a>
+      <p>Your legal shield in every financial storm. Headquartered in New Delhi, serving clients pan-India across DRTs, High Courts & beyond.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Practice Areas</div>
+      <div class="footer-links">
+        <a href="#services">Loan Settlement</a>
+        <a href="#services">Debt Settlement</a>
+        <a href="#services">SARFAESI Defence</a>
+        <a href="#services">Cyber Crime</a>
+        <a href="#services">Corporate Law</a>
+        <a href="#services">NPA Resolution</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-links">
+        <a href="tel:+919354014690">+91 93540 14690</a>
+        <a href="mailto:info@jurivoxlegal.com">info@jurivoxlegal.com</a>
+        <a href="#">New Delhi, India</a>
+        <a href="#">Mon–Sat · 10AM–6PM</a>
+        <a href="https://wa.me/919354014690" target="_blank">WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 JuriVox Legal. All rights reserved.</div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WA FLOAT BUTTON -->
+<a class="wa-float" href="https://wa.me/919354014690?text=Hello%20JuriVox%20Legal%2C%20I%20need%20legal%20consultation." target="_blank">
+  <div class="wa-tooltip">Chat with us</div>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// ── WhatsApp Form Submit ──
+function sendToWhatsApp() {
+  const name    = document.getElementById('fname').value.trim();
+  const phone   = document.getElementById('fphone').value.trim();
+  const email   = document.getElementById('femail').value.trim();
+  const matter  = document.getElementById('fmatter').value;
+  const desc    = document.getElementById('fdesc').value.trim();
+
+  if (!name || !phone || !matter) {
+    alert('Please fill in your Name, Phone, and Legal Matter to proceed.');
+    return;
+  }
+
+  const msg = [
+    '🔔 *New Consultation Request — JuriVox Legal*',
+    '',
+    `👤 *Name:* ${name}`,
+    `📞 *Phone:* ${phone}`,
+    email ? `✉️ *Email:* ${email}` : '',
+    `⚖️ *Matter:* ${matter}`,
+    desc ? `📝 *Details:* ${desc}` : '',
+    '',
+    '_Sent via JuriVoxLegal.com_'
+  ].filter(Boolean).join('\n');
+
+  const url = 'https://wa.me/919354014690?text=' + encodeURIComponent(msg);
+  window.open(url, '_blank');
+}
+
+// ── Scroll Reveal ──
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── Add reveal to cards dynamically ──
+document.querySelectorAll('.svc-card, .team-card').forEach((el, i) => {
+  el.style.transitionDelay = (i % 3) * 0.1 + 's';
+  el.classList.add('reveal');
+  revealObserver.observe(el);
+});
+</script>
+</body>
+</html>
